@@ -46,12 +46,12 @@ form {
 .form input[type="text"],
 .form input[type="url"] {
 	width: 90%;
-	margin: 20px 0 0 0;
+	padding: 16px;
+	margin: 25px 0;
 	background: #FFFFFF;
 	margin-bottom: 4%;
 	border: 1px solid #CCCCCC;
 	border-radius: 10px;
-	padding: 4%;
 	font-size: 14pt;
 	color: #093D7D;
 	outline: none;
@@ -59,15 +59,14 @@ form {
 
 .form input[type="text"]:focus,
 .form input[type="url"]:focus {
-	padding: 4%;
 	outline: none;
 	border: 1px solid #43A623;
 }
 
 .form button {
 	width: 180px;
-	margin: 0 0 35px 0;
-	padding: 3%;
+	padding: 16px;
+	margin-bottom: 25px;
 	background-color: #43A623;
 	border: none;
 	border-radius: 10px;
@@ -75,10 +74,8 @@ form {
 	color: #fff;
 	cursor: pointer;
 	transition: background-color .2s;
-}
-
-form button:hover {
-	background-color: rgba(88, 104, 191, 0.5);
+} .form button:hover {
+	background-color: #43A62370;
 }
 
 .qrcode-conteiner {
@@ -86,8 +83,8 @@ form button:hover {
 }
 
 .qrcode {
-	padding: 16px 0;
-	margin-bottom: 30px;
+	padding: 16px;
+	margin-bottom: 25px;
 }
 
 .qrcode img {
