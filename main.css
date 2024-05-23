@@ -63,7 +63,13 @@ form {
 	border: 1px solid #43A623;
 }
 
-.form button {
+.buttons {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 10px;
+}
+
+button {
 	width: 180px;
 	padding: 16px;
 	margin-bottom: 25px;
@@ -74,7 +80,7 @@ form {
 	color: #fff;
 	cursor: pointer;
 	transition: background-color .2s;
-} .form button:hover {
+} button:hover {
 	background-color: #43A62370;
 }
 

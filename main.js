@@ -1,12 +1,37 @@
-function generateQRCode() {
-	let website = document.getElementById("website").value;
-	if (website) {
-		let qrcodeConteiner = document.getElementById("qrcode");
-		qrcodeConteiner.innerHTML = "";
-		new QRCode(qrcodeConteiner, website);
+$(document).ready(function() {
+	$('#qrcode').empty();
+	$('#download').hide();
 
-		document.getElementById("qrcode-container").style.display = "block";
-	} else {
-		alert("Please enter a valid URL")
-	}
-}
+
+	$('#generate').on('click', function() {
+		var text = $('#url_inp').val();
+		if (text.trim() === '') {
+			alert('Please enter some text or URL.');
+			return;
+		}
+
+		$('#qrcode').empty();
+
+		var qrcode = new QRCode(document.getElementById('qrcode'), {
+			text: text,
+			width: 256,
+			height: 256,
+			colorDark : "#000000",
+			colorLight : "#ffffff",
+			correctLevel : QRCode.CorrectLevel.H
+		});
+
+		$("#download").show()
+	});
+	$('#download').on('click', function() {
+		var src = $('#qrcode img').attr("src");
+		var fn = "qrcode.png";
+
+		var a = $('<a>')
+			.attr('href', src)
+			.attr('download', fn)
+			.appendTo('body');
+		a[0].click();
+		a.remove();
+	});
+});
