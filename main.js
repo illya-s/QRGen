@@ -16,9 +16,9 @@ $(document).ready(function() {
 			text: text,
 			width: 256,
 			height: 256,
-			colorDark : "#000000",
-			colorLight : "#ffffff",
-			correctLevel : QRCode.CorrectLevel.H
+			colorDark: "#000000",
+			colorLight: "#ffffff",
+			correctLevel: QRCode.CorrectLevel.H
 		});
 
 		$("#download").show()
